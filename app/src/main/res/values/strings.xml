@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TMU_ECG_PPG_Monitor</string>
+    <string name="Email">Email: jcliou@tmu.edu.tw</string>
+    <string name="AppDescription">Monitoring the ECG PPG signal</string>
+    <string name="ScanBLE">Scan BLE Device</string>
+    <string name="Oscilloscope">ECG PPG Oscilloscope</string>
+    <string name="textPPG">PPGvalue</string>
+    <string name="textECG">ECGvalue</string>
+    <string name="textPPGvalue"> PPG Value:</string>
+    <string name="textECGvalue"> ECG Value:</string>
+    <string name="textUpdateTimes">Update Times:</string>
+    <string name="startRecording">Start Recording</string>
+    <string name="stopRecording">Stop Recording</string>
+    <string name="finishApp">Finish Program</string>
+    <string name="plot">Plot Graph</string>
+    <string name="posPPG">PPG-</string>
+    <string name="posECG">ECG-</string>
+    <string name="Back">Back</string>
+    <string name="Update">Update</string>
+</resources>
