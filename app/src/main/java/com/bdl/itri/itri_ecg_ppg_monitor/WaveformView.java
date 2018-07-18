@@ -49,7 +49,7 @@ public class WaveformView extends SurfaceView implements SurfaceHolder.Callback{
 		
 		plot_thread = new WaveformPlotThread(getHolder(), this);
 		
-		ECG_color.setColor(Color.RED);
+		ECG_color.setColor(Color.YELLOW);
 		PPG_color.setColor(Color.argb(255, 47, 189, 255));
 		grid_paint.setColor(Color.rgb(100, 100, 100));
 		cross_paint.setColor(Color.rgb(70, 100, 70));
@@ -109,7 +109,8 @@ public class WaveformView extends SurfaceView implements SurfaceHolder.Callback{
 	}
 	
 	public void PlotPoints(Canvas canvas){
-		Log.d("myTAG", "WaveformView.PlotPoints()");
+		// Log.d("myTAG", "WaveformView.PlotPoints()");
+		if (canvas == null) { return; }
 		// clear screen
 		canvas.drawColor(Color.rgb(20, 20, 20));
 		// draw vertical grids
@@ -133,7 +134,9 @@ public class WaveformView extends SurfaceView implements SurfaceHolder.Callback{
  		canvas.drawLine(0, 0, 0, (HEIGHT+1), outline_paint); //left
  		
  		// plot data
-		for(int x=0; x<(WIDTH-1); x++){			
+		for(int x=0; x<(WIDTH-1); x++){
+			ECG_color.setStrokeWidth(5);
+			PPG_color.setStrokeWidth(5);
 			canvas.drawLine(x+1, dataPPG[x], x+2, dataPPG[x+1], PPG_color);
 			canvas.drawLine(x+1, dataECG[x], x+2, dataECG[x+1], ECG_color);
 		}

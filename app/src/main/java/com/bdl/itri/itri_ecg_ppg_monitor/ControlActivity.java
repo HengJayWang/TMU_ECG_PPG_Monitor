@@ -79,7 +79,6 @@ public class ControlActivity extends AppCompatActivity {
     private String mDeviceName;
     private String mDeviceAddress;
 
-
     private boolean mConnected = false;
     private BluetoothGattCharacteristic mNotifyCharacteristic;
     private BluetoothLeService mBluetoothLeService;
@@ -89,8 +88,6 @@ public class ControlActivity extends AppCompatActivity {
     TextView hexPPGValue;
     TextView decECGValue;
     TextView decPPGValue;
-
-
 
     public WaveformView WaveformArea = null;
 
@@ -118,8 +115,6 @@ public class ControlActivity extends AppCompatActivity {
         hexECGValue = (TextView)findViewById(R.id.ECGvalueHex);
         decPPGValue = (TextView)findViewById(R.id.PPGvalueDec);
         decECGValue = (TextView)findViewById(R.id.ECGvalueDec);
-
-
 
         initialDataArray(dataECG, dataPPG);
 
@@ -393,8 +388,7 @@ public class ControlActivity extends AppCompatActivity {
                         }
                         if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
                             mNotifyCharacteristic = characteristic;
-                            mBluetoothLeService.setCharacteristicNotification(
-                                    characteristic, true);
+                            mBluetoothLeService.setCharacteristicNotification(characteristic, true);
                         }
                         return true;
                     }

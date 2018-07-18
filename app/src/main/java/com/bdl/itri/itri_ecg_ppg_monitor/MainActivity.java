@@ -227,9 +227,7 @@ public class MainActivity extends AppCompatActivity {
                     mBluetoothLeScanner.stopScan(scanCallback);
                     listViewLE.invalidateViews();
 
-                    Toast.makeText(MainActivity.this,
-                            "Scan timeout",
-                            Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Scan timeout", Toast.LENGTH_LONG).show();
 
                     mScanning = false;
                     btnScan.setEnabled(true);
